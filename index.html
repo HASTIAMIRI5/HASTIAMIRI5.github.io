@@ -16,21 +16,23 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="theme-light">
     <header class="site-header">
       <nav class="container nav">
-        <div class="brand">Hasti Amiri</div>
+        <a class="brand" href="#top">Hasti Amiri</a>
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#roadmap">Roadmap</a>
+          <a href="#cv">CV</a>
           <a href="#contact">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-copy">
@@ -46,14 +48,24 @@
               <a class="button secondary" href="#contact">Connect</a>
             </div>
           </div>
-          <div class="hero-card">
-            <div class="status-tag">Career focus</div>
-            <h2>IT Administrator / Junior System Administrator</h2>
-            <ul>
-              <li>Preferred market: Germany</li>
-              <li>Languages: English C1+ · German A1 (learning)</li>
-              <li>Strengths: Documentation, troubleshooting, lab-based learning</li>
-            </ul>
+
+          <div class="profile-card">
+            <div class="profile-image-wrap">
+              <img
+                src="https://avatars.githubusercontent.com/u/150794955?v=4"
+                alt="Hasti Amiri profile portrait"
+                class="profile-image"
+              />
+            </div>
+            <div class="profile-card-body">
+              <div class="status-tag">Career focus</div>
+              <h2>IT Administrator / Junior System Administrator</h2>
+              <ul>
+                <li>Preferred market: Germany</li>
+                <li>Languages: English C1+ · German A1 (learning)</li>
+                <li>Strengths: Documentation, troubleshooting, lab-based learning</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -168,6 +180,7 @@
                 <li>Create users, OUs, and security groups</li>
                 <li>Apply Group Policy and document permissions</li>
               </ul>
+              <a class="text-link" href="projects/windows-server-active-directory-lab.html">Read details →</a>
             </article>
 
             <article class="project-card">
@@ -180,6 +193,7 @@
                 <li>Generate user and group inventory reports</li>
                 <li>Check services and event logs</li>
               </ul>
+              <a class="text-link" href="projects/powershell-administration-toolkit.html">Read details →</a>
             </article>
 
             <article class="project-card">
@@ -192,6 +206,7 @@
                 <li>Investigate connectivity and subnet issues</li>
                 <li>Analyze traffic and record root cause</li>
               </ul>
+              <a class="text-link" href="projects/network-troubleshooting-lab.html">Read details →</a>
             </article>
 
             <article class="project-card">
@@ -204,6 +219,7 @@
                 <li>Install packages and control services</li>
                 <li>Review logs and practice SSH configuration</li>
               </ul>
+              <a class="text-link" href="projects/linux-system-administration-lab.html">Read details →</a>
             </article>
 
             <article class="project-card">
@@ -216,6 +232,7 @@
                 <li>Restore data and verify integrity</li>
                 <li>Record outcomes and limitations</li>
               </ul>
+              <a class="text-link" href="projects/backup-disaster-recovery-lab.html">Read details →</a>
             </article>
 
             <article class="project-card">
@@ -228,6 +245,7 @@
                 <li>Review system and application logs</li>
                 <li>Document anomalies and corrective actions</li>
               </ul>
+              <a class="text-link" href="projects/infrastructure-monitoring-log-analysis.html">Read details →</a>
             </article>
 
             <article class="project-card">
@@ -240,12 +258,32 @@
                 <li>Study conditional access and MFA</li>
                 <li>Apply least-privilege principles</li>
               </ul>
+              <a class="text-link" href="projects/microsoft-365-identity-management.html">Read details →</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section alt">
+      <section id="cv" class="section alt">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">CV</span>
+            <h2>Downloadable curriculum vitae.</h2>
+          </div>
+          <div class="cv-box panel">
+            <div>
+              <h3>Hasti Amiri — IT Administrator Portfolio CV</h3>
+              <p>
+                Includes focus areas in infrastructure administration, Windows systems, networking,
+                logging, troubleshooting, and hands-on lab work.
+              </p>
+            </div>
+            <a class="button primary" href="cv.html" download="Hasti-Amiri-CV.html">Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="container">
           <div class="section-heading">
             <span class="kicker">Project standards</span>
@@ -277,7 +315,7 @@
         </div>
       </section>
 
-      <section id="roadmap" class="section">
+      <section id="roadmap" class="section alt">
         <div class="container">
           <div class="section-heading">
             <span class="kicker">Current learning roadmap</span>
@@ -296,7 +334,7 @@
         </div>
       </section>
 
-      <section class="section alt">
+      <section class="section">
         <div class="container">
           <div class="section-heading">
             <span class="kicker">Current focus</span>
@@ -325,5 +363,73 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
