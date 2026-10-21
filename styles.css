@@ -1,7 +1,7 @@
 :root {
   --bg: #0b1020;
   --bg-soft: #121a2b;
-  --panel: rgba(17, 24, 39, 0.88);
+  --panel: rgba(17, 24, 39, 0.9);
   --panel-strong: #0f172a;
   --surface: #111827;
   --surface-alt: #0d1322;
@@ -13,6 +13,9 @@
   --accent: #7dd3fc;
   --shadow: 0 18px 45px rgba(2, 6, 23, 0.38);
   --hero-glow: rgba(0, 199, 183, 0.25);
+  --card-hover: rgba(15, 23, 42, 0.96);
+  --badge-bg: rgba(125, 211, 252, 0.08);
+  --badge-text: #cceeff;
 }
 
 body.theme-light {
@@ -30,6 +33,9 @@ body.theme-light {
   --accent: #2563eb;
   --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
   --hero-glow: rgba(15, 118, 110, 0.12);
+  --card-hover: rgba(248, 250, 252, 1);
+  --badge-bg: rgba(37, 99, 235, 0.08);
+  --badge-text: #1d4ed8;
 }
 
 * {
@@ -124,12 +130,16 @@ body.theme-light .site-header {
   background: var(--panel);
   color: var(--text);
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .theme-toggle:hover {
   transform: translateY(-1px);
   border-color: rgba(125, 211, 252, 0.5);
+}
+
+main {
+  padding-bottom: 1.5rem;
 }
 
 .hero {
@@ -154,24 +164,29 @@ body.theme-light .site-header {
 }
 
 .hero-copy {
-  padding: 2rem 2.2rem;
+  padding: 2.2rem 2.4rem;
   border-radius: 24px;
 }
 
 .eyebrow,
 .kicker {
-  display: inline-block;
-  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid rgba(125, 211, 252, 0.14);
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--primary);
   margin-bottom: 1rem;
 }
 
 .hero-copy h1 {
   margin: 0 0 1rem;
-  font-size: clamp(2.25rem, 4vw, 4rem);
+  font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 1.08;
   letter-spacing: -0.06em;
 }
@@ -194,10 +209,10 @@ body.theme-light .site-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.88rem 1.3rem;
+  padding: 0.9rem 1.35rem;
   border-radius: 999px;
   font-weight: 700;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
 }
 
 .button:hover {
@@ -207,6 +222,7 @@ body.theme-light .site-header {
 .button.primary {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
   color: white;
+  box-shadow: 0 10px 25px rgba(0, 199, 183, 0.2);
 }
 
 .button.secondary {
@@ -315,16 +331,27 @@ body.theme-light .site-header {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1.25rem;
+  justify-items: center;
 }
 
 .skill-card,
 .project-card {
+  width: 100%;
+  max-width: 360px;
   border-radius: 20px;
   padding: 1.25rem 1.2rem;
   background: var(--panel);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125, 211, 252, 0.32);
+  box-shadow: 0 22px 42px rgba(2, 6, 23, 0.28);
 }
 
 .skill-card h3 {
@@ -339,8 +366,14 @@ body.theme-light .site-header {
 }
 
 .project-meta {
-  color: var(--primary);
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid rgba(125, 211, 252, 0.14);
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -361,6 +394,9 @@ body.theme-light .site-header {
 .language-box {
   padding: 1.7rem 1.5rem;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .language-box p {
