@@ -1,41 +1,61 @@
-:root {
-  --bg: #0b1020;
-  --bg-soft: #121a2b;
-  --panel: rgba(17, 24, 39, 0.9);
-  --panel-strong: #0f172a;
-  --surface: #111827;
-  --surface-alt: #0d1322;
-  --text: #e5edf9;
-  --muted: #9aa9c2;
-  --border: rgba(148, 163, 184, 0.2);
-  --primary: #00c7b7;
-  --primary-strong: #00a99d;
-  --accent: #7dd3fc;
-  --shadow: 0 18px 45px rgba(2, 6, 23, 0.38);
-  --hero-glow: rgba(0, 199, 183, 0.25);
-  --card-hover: rgba(15, 23, 42, 0.96);
-  --badge-bg: rgba(125, 211, 252, 0.08);
-  --badge-text: #cceeff;
+ :root {
+  --bg: #07111f;
+  --bg-soft: #0d1b2a;
+  --panel: rgba(12, 23, 37, 0.78);
+  --panel-strong: #0f1d2d;
+  --surface: #101f2f;
+  --surface-alt: #0b1725;
+  --text: #ebf4ff;
+  --muted: #a9bdd3;
+  --border: rgba(148, 163, 184, 0.18);
+  --primary: #4fd1c5;
+  --primary-strong: #1bb8b2;
+  --accent: #8adcf8;
+  --shadow: 0 18px 40px rgba(2, 7, 18, 0.35);
+  --hero-glow: rgba(79, 209, 197, 0.22);
+  --card-hover: rgba(15, 29, 45, 0.96);
+  --badge-bg: rgba(138, 220, 248, 0.09);
+  --badge-text: #d9f4ff;
 }
 
 body.theme-light {
-  --bg: #f3f7fb;
-  --bg-soft: #eef4fb;
-  --panel: rgba(255, 255, 255, 0.95);
+  --bg: #edf5fb;
+  --bg-soft: #f7fafc;
+  --panel: rgba(255, 255, 255, 0.9);
   --panel-strong: #ffffff;
   --surface: #ffffff;
-  --surface-alt: #f8fafc;
+  --surface-alt: #eef4fa;
   --text: #0f172a;
-  --muted: #4b5563;
+  --muted: #51657d;
   --border: rgba(148, 163, 184, 0.35);
   --primary: #0f766e;
   --primary-strong: #0b5d5a;
   --accent: #2563eb;
-  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --shadow: 0 22px 45px rgba(15, 23, 42, 0.08);
   --hero-glow: rgba(15, 118, 110, 0.12);
   --card-hover: rgba(248, 250, 252, 1);
   --badge-bg: rgba(37, 99, 235, 0.08);
   --badge-text: #1d4ed8;
+}
+
+body.theme-dark {
+  --bg: #07111f;
+  --bg-soft: #0d1b2a;
+  --panel: rgba(12, 23, 37, 0.78);
+  --panel-strong: #0f1d2d;
+  --surface: #101f2f;
+  --surface-alt: #0b1725;
+  --text: #ebf4ff;
+  --muted: #a9bdd3;
+  --border: rgba(148, 163, 184, 0.18);
+  --primary: #4fd1c5;
+  --primary-strong: #1bb8b2;
+  --accent: #8adcf8;
+  --shadow: 0 18px 40px rgba(2, 7, 18, 0.35);
+  --hero-glow: rgba(79, 209, 197, 0.22);
+  --card-hover: rgba(15, 29, 45, 0.96);
+  --badge-bg: rgba(138, 220, 248, 0.09);
+  --badge-text: #d9f4ff;
 }
 
 * {
@@ -51,15 +71,21 @@ body {
   font-family: "Inter", sans-serif;
   background:
     radial-gradient(circle at top left, var(--hero-glow), transparent 26%),
-    radial-gradient(circle at bottom right, rgba(125, 211, 252, 0.12), transparent 22%),
+    radial-gradient(circle at bottom right, rgba(138, 220, 248, 0.12), transparent 20%),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+p,
+ul {
+  margin-top: 0;
 }
 
 a {
@@ -81,12 +107,12 @@ button {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(11, 16, 32, 0.72);
+  background: rgba(7, 17, 31, 0.72);
   border-bottom: 1px solid var(--border);
 }
 
 body.theme-light .site-header {
-  background: rgba(243, 247, 251, 0.8);
+  background: rgba(237, 245, 251, 0.8);
 }
 
 .nav {
@@ -98,17 +124,21 @@ body.theme-light .site-header {
 }
 
 .brand {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   color: var(--text);
+}
+
+.brand::before {
+  content: "🚀 ";
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .nav-links a {
@@ -125,6 +155,9 @@ body.theme-light .site-header {
 .theme-toggle {
   width: 2.5rem;
   height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--panel);
@@ -135,7 +168,7 @@ body.theme-light .site-header {
 
 .theme-toggle:hover {
   transform: translateY(-1px);
-  border-color: rgba(125, 211, 252, 0.5);
+  border-color: rgba(138, 220, 248, 0.45);
 }
 
 main {
@@ -148,7 +181,7 @@ main {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 1.35fr 0.75fr;
   gap: 2rem;
   align-items: center;
 }
@@ -164,8 +197,8 @@ main {
 }
 
 .hero-copy {
-  padding: 2.2rem 2.4rem;
-  border-radius: 24px;
+  padding: 2.5rem 2.3rem;
+  border-radius: 26px;
 }
 
 .eyebrow,
@@ -176,8 +209,8 @@ main {
   border-radius: 999px;
   background: var(--badge-bg);
   color: var(--badge-text);
-  border: 1px solid rgba(125, 211, 252, 0.14);
-  font-size: 0.74rem;
+  border: 1px solid rgba(138, 220, 248, 0.16);
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -188,7 +221,7 @@ main {
   margin: 0 0 1rem;
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 1.08;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.065em;
 }
 
 .hero-copy p {
@@ -221,8 +254,8 @@ main {
 
 .button.primary {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
-  color: white;
-  box-shadow: 0 10px 25px rgba(0, 199, 183, 0.2);
+  color: #03131d;
+  box-shadow: 0 10px 24px rgba(79, 209, 197, 0.2);
 }
 
 .button.secondary {
@@ -256,7 +289,7 @@ main {
   display: inline-flex;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  background: rgba(0, 199, 183, 0.12);
+  background: rgba(79, 209, 197, 0.12);
   color: var(--primary);
   font-weight: 700;
   font-size: 0.72rem;
@@ -265,15 +298,15 @@ main {
 }
 
 .profile-card-body h2 {
-  margin: 1rem 0 0.75rem;
-  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  margin: 1rem 0 0.8rem;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
   line-height: 1.25;
 }
 
 .profile-card-body ul,
 .skill-card ul {
   margin: 0;
-  padding-left: 1.05rem;
+  padding-left: 1.1rem;
   color: var(--muted);
 }
 
@@ -283,7 +316,7 @@ main {
 }
 
 .section {
-  padding: 2.75rem 0;
+  padding: 2.8rem 0;
 }
 
 .section.alt {
@@ -312,13 +345,13 @@ main {
 }
 
 .panel {
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 1.4rem 1.3rem;
 }
 
 .panel h3 {
   margin-top: 0;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
   font-size: 1.15rem;
 }
 
@@ -331,15 +364,13 @@ main {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  justify-items: center;
+  gap: 1.2rem;
 }
 
 .skill-card,
 .project-card {
   width: 100%;
-  max-width: 360px;
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 1.25rem 1.2rem;
   background: var(--panel);
   border: 1px solid var(--border);
@@ -350,13 +381,13 @@ main {
 .skill-card:hover,
 .project-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(125, 211, 252, 0.32);
-  box-shadow: 0 22px 42px rgba(2, 6, 23, 0.28);
+  border-color: rgba(138, 220, 248, 0.28);
+  box-shadow: 0 22px 42px rgba(2, 6, 23, 0.26);
 }
 
 .skill-card h3 {
   margin: 0 0 0.8rem;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
 }
 
 .project-card {
@@ -372,8 +403,8 @@ main {
   border-radius: 999px;
   background: var(--badge-bg);
   color: var(--badge-text);
-  border: 1px solid rgba(125, 211, 252, 0.14);
-  font-size: 0.72rem;
+  border: 1px solid rgba(138, 220, 248, 0.14);
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -381,8 +412,8 @@ main {
 
 .project-card h3 {
   margin: 0;
-  font-size: 1.2rem;
-  line-height: 1.3;
+  font-size: 1.15rem;
+  line-height: 1.35;
 }
 
 .project-card a {
@@ -401,7 +432,7 @@ main {
 
 .language-box p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
@@ -413,7 +444,7 @@ main {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   gap: 1.5rem;
 }
 
@@ -432,13 +463,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem 1rem;
-  padding-top: 0.3rem;
+  padding-top: 0.35rem;
 }
 
 .footer-links a {
   color: var(--text);
   font-weight: 600;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 @media (max-width: 920px) {

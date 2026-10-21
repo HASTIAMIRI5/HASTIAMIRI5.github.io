@@ -16,18 +16,18 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="theme-light">
+  <body class="theme-dark">
     <header class="site-header">
-      <nav class="container nav">
-        <a class="brand" href="#top">🚀 Hasti Amiri</a>
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="brand" href="#top">Hasti Amiri</a>
         <div class="nav-links">
           <a href="#about">About</a>
-          <a href="#skills">Skills</a>
           <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
           <a href="#career">Career</a>
           <a href="#languages">Languages</a>
           <a href="#contact">Contact</a>
-          <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">☀️</button>
         </div>
       </nav>
     </header>
@@ -49,7 +49,7 @@
             </div>
           </div>
 
-          <div class="profile-card">
+          <aside class="profile-card" aria-label="Profile card">
             <div class="profile-image-wrap">
               <img
                 src="https://avatars.githubusercontent.com/u/150794955?v=4"
@@ -67,7 +67,7 @@
                 <li>Automation &amp; Troubleshooting</li>
               </ul>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
 
@@ -78,25 +78,84 @@
             <h2>Infrastructure-focused and practical in every deployment.</h2>
           </div>
           <div class="about-grid">
-            <div class="panel">
+            <article class="panel">
               <h3>Professional profile</h3>
               <p>
                 I work with the fundamentals that keep systems running smoothly: infrastructure setup,
                 user access, network troubleshooting, documentation, automation, and secure operations.
               </p>
-            </div>
-            <div class="panel">
+            </article>
+            <article class="panel">
               <h3>Working principles</h3>
               <p>
                 Reliable systems start with clean architecture, tested configuration, and repeatable
                 documentation. I focus on hands-on, lab-driven learning and practical problem solving.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="section alt">
+      <section id="portfolio" class="section alt">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">Portfolio</span>
+            <h2>Hands-on labs and practical projects.</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-meta">Windows Server · Active Directory · DNS</div>
+              <h3>Windows Server &amp; Active Directory Home Lab</h3>
+              <a href="https://github.com/HASTIAMIRI5/Windows-Server-Active-Directory-Home-Lab" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">Linux · System Administration · Security</div>
+              <h3>Linux Server Administration Lab</h3>
+              <a href="https://github.com/HASTIAMIRI5/linux-server-administration-lab" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">Networking · Troubleshooting · Diagnostics</div>
+              <h3>Network Troubleshooting Lab</h3>
+              <a href="https://github.com/HASTIAMIRI5/Network-Troubleshooting-Lab" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">PowerShell · Administration · Automation</div>
+              <h3>PowerShell Administration Toolkit</h3>
+              <a href="https://github.com/HASTIAMIRI5/PowerShell-Administration-Toolkit" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">Monitoring · Logs · Troubleshooting</div>
+              <h3>Infrastructure Monitoring &amp; Log Analysis</h3>
+              <a href="https://github.com/HASTIAMIRI5/Infrastructure-Monitoring-Log-Analysis" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">Backup · Recovery · DR</div>
+              <h3>Backup &amp; Disaster Recovery Lab</h3>
+              <a href="https://github.com/HASTIAMIRI5/Backup-Disaster-Recovery-Lab" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">AI · Chatbot · Memory</div>
+              <h3>groq-memory-chat</h3>
+              <a href="https://github.com/HASTIAMIRI5/groq-memory-chat" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-meta">GitHub Pages · Portfolio</div>
+              <h3>GitHub Pages Portfolio</h3>
+              <a href="https://github.com/HASTIAMIRI5/HASTIAMIRI5.github.io" target="_blank" rel="noreferrer">Open project →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
         <div class="container">
           <div class="section-heading">
             <span class="kicker">Core skills</span>
@@ -152,65 +211,6 @@
                 <li>Permissions and logs</li>
                 <li>Monitoring and troubleshooting</li>
               </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="kicker">Portfolio</span>
-            <h2>Hands-on labs and practical projects.</h2>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-meta">Windows Server · Active Directory · DNS</div>
-              <h3>Windows Server &amp; Active Directory Home Lab</h3>
-              <a href="https://github.com/HASTIAMIRI5/Windows-Server-Active-Directory-Home-Lab" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">PowerShell · Administration · Automation</div>
-              <h3>PowerShell Administration Toolkit</h3>
-              <a href="https://github.com/HASTIAMIRI5/PowerShell-Administration-Toolkit" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">Networking · Troubleshooting · Diagnostics</div>
-              <h3>Network Troubleshooting Lab</h3>
-              <a href="https://github.com/HASTIAMIRI5/Network-Troubleshooting-Lab" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">Linux · System Administration · Security</div>
-              <h3>Linux Server Administration Lab</h3>
-              <a href="https://github.com/HASTIAMIRI5/linux-server-administration-lab" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">Backup · Recovery · DR</div>
-              <h3>Backup &amp; Disaster Recovery Lab</h3>
-              <a href="https://github.com/HASTIAMIRI5/Backup-Disaster-Recovery-Lab" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">Monitoring · Logs · Troubleshooting</div>
-              <h3>Infrastructure Monitoring &amp; Log Analysis</h3>
-              <a href="https://github.com/HASTIAMIRI5/Infrastructure-Monitoring-Log-Analysis" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">AI · Chatbot · Memory</div>
-              <h3>groq-memory-chat</h3>
-              <a href="https://github.com/HASTIAMIRI5/groq-memory-chat" target="_blank" rel="noreferrer">Open project →</a>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">GitHub Pages · Portfolio</div>
-              <h3>GitHub Pages Portfolio</h3>
-              <a href="https://github.com/HASTIAMIRI5/HASTIAMIRI5.github.io" target="_blank" rel="noreferrer">Open project →</a>
             </article>
           </div>
         </div>

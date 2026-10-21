@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".theme-toggle");
 
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    body.classList.add("theme-dark");
-    body.classList.remove("theme-light");
-    if (toggle) toggle.textContent = "☀️";
-  }
+  const prefersDark = savedTheme ? savedTheme === "dark" : true;
+
+  body.classList.toggle("theme-dark", prefersDark);
+  body.classList.toggle("theme-light", !prefersDark);
 
   if (toggle) {
+    toggle.textContent = prefersDark ? "☀️" : "🌙";
     toggle.addEventListener("click", () => {
       const isDark = body.classList.toggle("theme-dark");
       body.classList.toggle("theme-light", !isDark);
