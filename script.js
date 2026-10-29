@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.classList.toggle("theme-dark", isDark);
     body.classList.toggle("theme-light", !isDark);
     if (toggle) {
-      toggle.textContent = isDark ? "☀️" : "🌙";
+      toggle.textContent = isDark ? "☀" : "☾";
       toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
       toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
     }
