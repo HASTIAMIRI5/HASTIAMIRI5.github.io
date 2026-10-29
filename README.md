@@ -1,12 +1,12 @@
-# HASTIAMIRI5.github.io
+# HASTIAMIRI5.GITHUB.IO
 
-GitHub Pages portfolio for Hasti Amiri — AI engineer, security-focused builder, and automation specialist exploring AI workflows, detection engineering, threat analysis, and practical systems design.
+GITHUB PAGES PORTFOLIO FOR HASTI AMIRI — AI ENGINEER, SECURITY-FOCUSED BUILDER, AND AUTOMATION SPECIALIST EXPLORING AI WORKFLOWS, DETECTION ENGINEERING, THREAT ANALYSIS, AND PRACTICAL SYSTEMS DESIGN.
 
-## Highlights
-- AI systems and workflow experimentation
-- Detection engineering and SOC research
-- Cybersecurity, threat analysis, and automation
-- Infrastructure, Linux/Windows operations, and systems thinking
+## HIGHLIGHTS
+- AI SYSTEMS AND WORKFLOW EXPERIMENTATION
+- DETECTION ENGINEERING AND SOC RESEARCH
+- CYBERSECURITY, THREAT ANALYSIS, AND AUTOMATION
+- INFRASTRUCTURE, LINUX/WINDOWS OPERATIONS, AND SYSTEMS THINKING
 
-## Live site
+## LIVE SITE
 https://hastiamiri5.github.io/
